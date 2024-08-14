@@ -426,7 +426,9 @@ public class BigtableHBaseVeneerSettings extends BigtableHBaseSettings {
   }
 
   private void configureConnection(StubSettings.Builder<?, ?> stubSettings, String endpointKey) {
+    System.out.println("Configuring Connection with endpointKey: " + endpointKey);
     String defaultEndpoint = stubSettings.getEndpoint();
+    System.out.println("Default endpoint is : " + defaultEndpoint);
     String defaultHostname = defaultEndpoint.substring(0, defaultEndpoint.lastIndexOf(':'));
     String defaultPort = defaultEndpoint.substring(defaultEndpoint.lastIndexOf(':') + 1);
 
