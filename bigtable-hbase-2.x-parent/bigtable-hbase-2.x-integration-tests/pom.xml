@@ -291,7 +291,7 @@ limitations under the License.
                   </includes>
                   <excludedGroups>KnownGap</excludedGroups>
 
-                  <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                  <!--<redirectTestOutputToFile>true</redirectTestOutputToFile>-->
 
                   <!-- Run tests in parallel -->
                   <parallel>classes</parallel>
@@ -302,6 +302,9 @@ limitations under the License.
                   <systemPropertyVariables>
                     <google.bigtable.test_env>cloud</google.bigtable.test_env>
                   </systemPropertyVariables>
+                  <environmentVariables>
+                    <CBT_ENABLE_DIRECTPATH>true</CBT_ENABLE_DIRECTPATH>
+                  </environmentVariables>
                   <forkedProcessTimeoutInSeconds>${test.timeout}</forkedProcessTimeoutInSeconds>
 
                   <!-- Make sure to fail the build when the suite fails to initialize -->
